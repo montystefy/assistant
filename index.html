@@ -784,7 +784,7 @@ async function doCapture() {
   document.getElementById('capCount').textContent = screenState.capCount + ' catture';
   try {
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body: JSON.stringify({
         model:'claude-sonnet-4-20250514', max_tokens:800,
         messages:[{ role:'user', content:[
@@ -862,7 +862,7 @@ async function processFile(file) {
     }
 
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:400, messages:[{ role:'user', content: msgContent }] })
     });
     const d = await resp.json();
@@ -983,7 +983,7 @@ ARCHIVE CONTENT:
 ${ctx}`;
   try {
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:600, system:sysPrompt, messages: chatHistory.slice(-10) })
     });
     const d = await resp.json();
@@ -1143,7 +1143,7 @@ function closeModal() { document.getElementById('modalBg').classList.remove('on'
 // ══════════════════════════════════════════════════════
 async function callAI(prompt) {
   const r = await fetch('https://api.anthropic.com/v1/messages', {
-    method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    method:'POST', headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
     body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1200, messages:[{role:'user',content:prompt}] })
   });
   if (!r.ok) throw new Error('HTTP '+r.status);
